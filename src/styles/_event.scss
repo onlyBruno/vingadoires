@@ -1,0 +1,119 @@
+.event {
+    padding: 200px 0;
+    .container {
+        display: flex;
+    }
+
+    &__image {
+        max-width: 700px;
+        padding-left: 200px;
+    }
+
+    &__imagem {
+        width: 400px;
+        margin: 20px;
+        margin-left: 100px;
+    }
+
+    &__imagens {
+        width: 300px;
+        max-width: 100%;
+        flex-wrap: wrap;
+        flex: 0 0 calc(25% - 10px);
+        margin-bottom: 10px;
+        margin: 20px;
+        margin-left: 120px;
+    }
+
+    &__detail {
+        padding-left: 200px;
+        &__title {
+            font-size: 80px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            margin-left: 400px;
+        }
+
+        &__titles {
+            font-size: 80px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        &__description {
+            font-size: 22px;
+            line-height: 22px;
+        }
+
+        &__descriptions {
+            font-size: 22px;
+            line-height: 22px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    }
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .event {
+        padding: 100px 0; 
+
+        .container {
+            flex-direction: column;
+            align-items: center; 
+        }
+
+        &__image {
+            max-width: 100%; 
+            padding-left: 0; 
+        }
+
+        &__imagem {
+            width: 90%; 
+            margin-left: 0; 
+        }
+
+        &__imagens {
+            width: 90%; 
+            margin-left: 0; 
+        }
+
+        &__detail {
+            padding-left: 0;
+
+            &__title {
+                font-size: 40px; 
+                margin-bottom: 20px; 
+                margin-left: 0;
+                text-align: center; 
+            }
+
+            &__titles {
+                font-size: 40px; 
+                margin-top: 20px; 
+            }
+
+            &__description,
+            &__descriptions {
+                font-size: 18px;
+                line-height: 24px; 
+                max-width: 90%; 
+                margin: 0 auto; 
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+@use 'hero';
+@use 'event';
+
+$bgColor: rgb(0, 0, 0);
+
+body {
+    background-color: $bgColor;
+    padding-top: 30px;
+}
+
+section {
+    padding-top: 80px;
+    margin-top: -80px;
+}
+
+.site-header {
+    width: 100%;
+    background-color: #0A3A6E;
+    color: aliceblue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 5px 0;
+}
+
+.cabecalho {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.logos {
+    width: 200px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.text {
+    display: none;
+    font-size: 22px;
+    color: aliceblue;
+    margin-top: 20px;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    transition: transform 0.3 ease, color 0.3 ease;
+    transform-origin: center;
+}
+
+h1:hover {
+    transform: scale(1.2);
+    color: #0A3A6E;
+}
+
+p {
+    color: aliceblue;
+}
+.event__imagem {
+    transition: transform 0.3 ease, color 0.3 ease; box-shadow: 0.3 ease;
+    transform-origin: center;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 5px solid transparent;
+}
+
+.event__imagem:hover {
+    transform: scale(1.1);
+    border: 5px solid #0A3A6E;
+    box-shadow: 0 0 20px #0A3A6E;
+}
+
+.figure {
+    position: relative;
+    width: calc(25% - 10px);
+    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px 15px;
+    border-radius: 5px;
+    color: #fff;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.figure:hover figcaption{
+    opacity: 1;
+}
+
+.footer {
+    background-color: #0A3A6E;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .logos {
+        width: 150px; 
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px; 
+    }
+
+    .nav-links li a {
+        font-size: 14px; 
+    }
+
+    .text {
+        display: block; 
+        font-size: 18px; 
+    }
+
+    .figure {
+        width: calc(50% - 10px); 
+    }
+}

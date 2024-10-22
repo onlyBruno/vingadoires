@@ -1,0 +1,24 @@
+{
+  "name": "projeto-vingadores",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp",
+    "watch": "gulp watchFiles",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.79.4"
+  },
+  "dependencies": {
+    "gulp-sass": "^5.1.0"
+  }
+}
